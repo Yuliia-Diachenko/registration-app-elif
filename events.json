@@ -1,0 +1,93 @@
+
+     [
+      {
+        "title": "Conference on Web Development",
+        "description": "A three-day conference covering the latest trends in web development.",
+        "event_date": "2024-10-15",
+        "organizer": "WebDev Community"
+      },
+      {
+        "title": "Hackathon for Social Impact",
+        "description": "A 24-hour hackathon focused on creating technology solutions for social and environmental challenges.",
+        "event_date": "2024-11-05",
+        "organizer": "Tech4Good Foundation"
+      },
+      {
+        "title": "Workshop: Introduction to Machine Learning",
+        "description": "Hands-on workshop introducing participants to machine learning concepts and tools.",
+        "event_date": "2024-09-25",
+        "organizer": "Data Science Club"
+      },
+      {
+        "title": "Tech Conference 2024",
+        "description": "Annual technology conference featuring industry experts and workshops.",
+        "event_date": "2024-10-20",
+        "organizer": "TechCon Organizers"
+      },
+      {
+        "title": "Startup Pitch Day",
+        "description": "A platform for startups to present their ideas to investors.",
+        "event_date": "2024-11-05",
+        "organizer": "Startup Hub"
+      },
+      {
+        "title": "Design Thinking Workshop",
+        "description": "Learn design thinking principles and apply them to real-world challenges.",
+        "event_date": "2024-09-28",
+        "organizer": "Creative Minds"
+      },
+      {
+        "title": "Startup Meetup",
+        "description": "Networking event for aspiring entrepreneurs and investors.",
+        "event_date": "2024-10-10",
+        "organizer": "Startup Network"
+      },
+      {
+        "title": "Frontend Development Workshop",
+        "description": "Hands-on workshop covering the latest frontend technologies and best practices.",
+        "event_date": "2024-09-20",
+        "organizer": "CodeCrafters"
+      },
+      {
+        "title": "Data Science Conference",
+        "description": "Conference bringing together data scientists, researchers, and industry professionals.",
+        "event_date": "2024-11-15",
+        "organizer": "DataCon"
+      },
+      {
+        "title": "JavaScript Meetup",
+        "description": "Monthly meetup for JavaScript enthusiasts to share knowledge and experiences.",
+        "event_date": "2024-10-25",
+        "organizer": "JS Community"
+      },
+      {
+        "title": "UI/UX Design Conference",
+        "description": "Conference focusing on user interface and user experience design trends.",
+        "event_date": "2024-11-10",
+        "organizer": "DesignCon"
+      },
+      {
+        "title": "Blockchain Summit",
+        "description": "Summit exploring the latest developments in blockchain technology and applications.",
+        "event_date": "2024-09-30",
+        "organizer": "Crypto Innovators"
+      },
+      {
+        "title": "Web Development Conference",
+        "description": "Join industry experts and fellow developers for a two-day conference focused on the latest trends and technologies in web development.",
+        "event_date": "2024-09-28",
+        "organizer": "DevCon"
+      },
+      {
+        "title": "Data Science Workshop: Exploring Machine Learning Algorithms",
+        "description": "Learn about various ML algorithms, from linear regression to deep neural networks, in this hands-on workshop.",
+        "event_date": "2024-10-10",
+        "organizer": "DataScience Society"
+      },
+      {
+        "title": "Startup Pitch Night",
+        "description": "Calling all entrepreneurs! Pitch your innovative startup idea to a panel of investors and mentors.",
+        "event_date": "2024-11-05",
+        "organizer": "StartupHub"
+      }
+    ]

@@ -13,16 +13,18 @@ import { isValidId } from '../middlewares/isValidId.js';
 
 const router = Router();
 
-router.get('/events', ctrlWrapper(getEventsController));
+router.get('/', ctrlWrapper(getEventsController));
 
-router.get('/events/:eventId', isValidId, ctrlWrapper(getEventsByIdController));
+router.get('/:eventId', isValidId, ctrlWrapper(getEventsByIdController));
 
-router.post('/events', validateBody(createEventSchema), ctrlWrapper(createEventController));
+router.post('/register', validateBody(createEventSchema), ctrlWrapper(createEventController));
 
-router.delete('/events/:eventId', ctrlWrapper(deleteEventController));
+router.post('/', validateBody(createEventSchema), ctrlWrapper(createEventController));
 
-router.put('/events/:eventId', validateBody(updateEventSchema), ctrlWrapper(upsertEventController));
+router.delete('/:eventId', ctrlWrapper(deleteEventController));
 
-router.patch('/events/:eventId', validateBody(updateEventSchema), ctrlWrapper(patchEventController));
+router.put('/:eventId', validateBody(updateEventSchema), ctrlWrapper(upsertEventController));
+
+router.patch('/:eventId', validateBody(updateEventSchema), ctrlWrapper(patchEventController));
 
 export default router;

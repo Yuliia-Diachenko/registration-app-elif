@@ -4,7 +4,7 @@ import authRouter from './auth.js';
 
 const router = Router();
 
-router.use('/students', eventsRouter);
+router.use('/events', eventsRouter);
 router.use('/auth', authRouter);
 
 export default router;

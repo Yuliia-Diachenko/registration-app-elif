@@ -5,11 +5,16 @@ const usersSchema = new Schema(
       name: { type: String, required: true },
       email: { type: String, required: true, unique: true },
       date_birth: { type: Date, required: true },
+      password: {type: String, required: true},
       where_here: { type: String,
                     required: true,
                     enum: ['Social media', 'Friends', 'Found myself'], }
     },
     { timestamps: true, versionKey: false },
   );
-
+  usersSchema.methods.toJSON = function () {
+    const obj = this.toObject();
+    delete obj.password;
+    return obj;
+  };
   export const UsersCollection = model('users', usersSchema);

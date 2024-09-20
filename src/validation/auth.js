@@ -13,6 +13,20 @@ export const registerUserSchema = Joi.object({
     'date.max': 'Date of birth should be before 2022-01-01',
     'any.required': 'Date of birth is required',
   }),
+  password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
   where_here: Joi.string().valid('Social media', 'Friends', 'Found myself').required(),
 });
 
+export const loginUserSchema = Joi.object({
+    email: Joi.string().email().required(),
+    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
+  });
+
+  export const requestResetEmailSchema = Joi.object({
+    email: Joi.string().email().required(),
+  });
+
+  export const resetPasswordSchema = Joi.object({
+    password: Joi.string().required(),
+    token: Joi.string().required(),
+  });

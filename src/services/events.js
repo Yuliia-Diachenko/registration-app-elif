@@ -6,17 +6,27 @@ export const getAllEvents = async ({
       page = 1,
       perPage = 10,
       sortOrder = SORT_ORDER.ASC,
-      sortBy = '_id'
+      sortBy = '_id',
+      filter = {},
 }) => {
   const limit = perPage;
   const skip = (page - 1) * perPage;
 
   const eventsQuery = EventsCollection.find();
-  const eventsCount = await EventsCollection.find()
-    .merge(eventsQuery)
-    .countDocuments();
+  if (filter.event_date) {
+    eventsQuery.where('event_date').equals(filter.event_date);
+  }
+  if (filter.title) {
+   eventsQuery.where('title').equals(filter.title);
+  }
+  if (filter.organizer) {
+    eventsQuery.where('organizer').equals(filter.organizer);
+  }
 
-  const events = await eventsQuery.skip(skip).limit(limit).sort({ [sortBy]: sortOrder }).exec();
+  const [eventsCount, events] = await Promise.all([
+    EventsCollection.find().merge(eventsQuery).countDocuments(),
+    eventsQuery.skip(skip).limit(limit).sort({ [sortBy]: sortOrder }).exec(),
+  ]);
 
   const paginationData = calculatePaginationData(eventsCount, perPage, page);
 

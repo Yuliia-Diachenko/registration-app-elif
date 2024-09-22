@@ -14,7 +14,7 @@ export const registerUserSchema = Joi.object({
     'any.required': 'Date of birth is required',
   }),
   password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
-  where_here: Joi.string().valid('Social media', 'Friends', 'Found myself').required(),
+  where_here: Joi.string().valid('Social media', 'Friends', 'Found myself'),
 });
 
 export const loginUserSchema = Joi.object({

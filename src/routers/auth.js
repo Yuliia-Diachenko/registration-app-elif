@@ -7,7 +7,7 @@ import { requestResetEmailSchema } from '../validation/auth.js';
 
 const router = Router();
 
-router.post('/register', validateBody(registerUserSchema), ctrlWrapper(registerUserController));
+router.post('/registerUser', validateBody(registerUserSchema), ctrlWrapper(registerUserController));
 
 router.post('/login', validateBody(loginUserSchema), ctrlWrapper(loginUserController));
 

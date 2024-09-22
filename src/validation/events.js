@@ -20,6 +20,7 @@ export const createEventSchema = Joi.object({
     'string.max': 'Organizer should have at most {#limit} characters',
     'any.required': 'Organizer is required',
   }),
+  userId: Joi.string().required(),
 });
 
 export const updateEventSchema = Joi.object({

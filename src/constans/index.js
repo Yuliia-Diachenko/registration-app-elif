@@ -18,3 +18,8 @@ export const SMTP = {
 };
 
 export const TEMPLATES_DIR = path.join(process.cwd(), 'src', 'templates');
+
+export const ROLES = {
+  ADMIN: 'admin',
+  USER: 'user',
+};

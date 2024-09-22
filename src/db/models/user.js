@@ -1,4 +1,5 @@
 import { model, Schema } from 'mongoose';
+import { ROLES } from '../../constans/index.js';
 
 const usersSchema = new Schema(
     {
@@ -7,8 +8,18 @@ const usersSchema = new Schema(
       date_birth: { type: Date, required: true },
       password: {type: String, required: true},
       where_here: { type: String,
-                    required: true,
-                    enum: ['Social media', 'Friends', 'Found myself'], }
+                    required: false,
+                    enum: ['Social media', 'Friends', 'Found myself'], },
+      role: {
+                    type: String,
+                    enum: [ROLES.ADMIN, ROLES.USER],
+                    default: ROLES.USER,
+                  },
+      eventId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'events'
+      }
     },
     { timestamps: true, versionKey: false },
   );
